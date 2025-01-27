@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - wire
+  - vc
+  - resistor
+  - gnd
   layers:
   - Default
   - TransparentFX

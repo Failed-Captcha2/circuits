@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class Wire : MonoBehaviour
 {
-    // Start is called before the first frame update
-    public float current;
-    public Terminal[] terminals;
-    public Collider2D other;
+    public ComponentAttributes component;
+    public ComponentAttributes other;
 
     void Start()
     {
-        terminals=GetComponentsInChildren<Terminal>();
+        component = GetComponent<ComponentAttributes>();
+
     }
 
     // Update is called once per frame
@@ -20,12 +19,13 @@ public class Wire : MonoBehaviour
         
     }
 
-    void OnTriggerStay2D(Collider2D collider){
-        if (terminals[0].voltage != -99){
-            terminals[1].voltage = terminals[0].voltage;
-        }
-        else if (terminals[1].voltage != -99){
-            terminals[0].voltage = terminals[1].voltage;
-        }
+    void OnCollisionStay2D(Collision2D collision)
+    {
+        other = collision.gameObject.GetComponent<ComponentAttributes>();
+        component.voltage = other.voltage;
+        component.current = other.current;
+       
+
     }
+
 }

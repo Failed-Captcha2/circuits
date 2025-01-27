@@ -6,24 +6,20 @@ using TMPro;
 public class VoltageSource : MonoBehaviour
 {
     public float voltage;
-    public float current;
-    public Terminal negative;
-    public Terminal positive;
+    public ComponentAttributes negativeTerminal;
+    public ComponentAttributes positiveTerminal;
     public TextMeshPro label;
     // Start is called before the first frame update
     void Start()
     {
         label = GetComponentInChildren<TextMeshPro>();
         label.text = voltage.ToString("F2") + "V";
-        positive.voltage = negative.voltage + voltage;
     }
 
     // Update is called once per frame
     void Update()
     {
+        positiveTerminal.voltage = negativeTerminal.voltage + voltage;
     }
 
-    void OnTriggerStay2D(Collider2D collider){
-        positive.voltage = negative.voltage + voltage;
-    }
 }
