@@ -212,6 +212,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   voltage: 2
   current: 0
+  contacts: []
 --- !u!50 &46015752
 Rigidbody2D:
   serializedVersion: 4
@@ -322,6 +323,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   voltage: 0
   current: 0
+  contacts: []
 --- !u!50 &201611758
 Rigidbody2D:
   serializedVersion: 4
@@ -506,6 +508,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   voltage: 0
   current: 0
+  contacts: []
 --- !u!1 &364910255
 GameObject:
   m_ObjectHideFlags: 0
@@ -580,6 +583,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   voltage: 0
   current: 0
+  contacts: []
 --- !u!50 &364910259
 Rigidbody2D:
   serializedVersion: 4
@@ -854,6 +858,7 @@ GameObject:
   - component: {fileID: 519359415}
   - component: {fileID: 519359416}
   - component: {fileID: 519359417}
+  - component: {fileID: 519359418}
   m_Layer: 0
   m_Name: ground
   m_TagString: gnd
@@ -968,6 +973,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   voltage: 0
   current: 0
+  contacts: []
 --- !u!50 &519359417
 Rigidbody2D:
   serializedVersion: 4
@@ -989,6 +995,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &519359418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519359412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1140fc8ea7f32254184addfb70e30227, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1213,6 +1231,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   voltage: 0
   current: 0
+  contacts: []
 --- !u!61 &1134020178
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1334,7 +1353,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1134020176}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.1025, y: -0.0689, z: 0}
+  m_LocalPosition: {x: 0.1, y: -0.0689, z: 0}
   m_LocalScale: {x: 4.5587, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1500,6 +1519,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   voltage: 0
   current: 0
+  contacts: []
 --- !u!114 &1715458442
 MonoBehaviour:
   m_ObjectHideFlags: 0

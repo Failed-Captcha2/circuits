@@ -20,6 +20,7 @@ public class VoltageSource : MonoBehaviour
     void Update()
     {
         positiveTerminal.voltage = negativeTerminal.voltage + voltage;
+        positiveTerminal.current = negativeTerminal.current;
     }
 
 }
